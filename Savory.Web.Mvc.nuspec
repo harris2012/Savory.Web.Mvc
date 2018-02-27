@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Savory.Web.Mvc</id>
+    <version>6.0.0</version>
+    <title>Savory.Web.Mvc</title>
+    <authors>Harris Zhang</authors>
+    <owners>Harris Zhang</owners>
+    <licenseUrl>https://www.savory.cn</licenseUrl>
+    <projectUrl>https://www.savory.cn</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/harriszhang14/Ranta/master/Ranta.Image/Icon/RantaIcon_150_150.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Savory.Web.Mvc</description>
+    <releaseNotes>Savory.Web.Mvc</releaseNotes>
+    <copyright>Copyright © Harris Zhang 2016</copyright>
+    <tags>Ranta Web</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework="net40" />
+    </frameworkAssemblies>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Mvc" version="[5.2.4,)" />
+      <dependency id="Savory.Logging" version="[2.0.1,)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Savory.Web.Mvc\bin\Release\Savory.Web.Mvc.dll" target="lib\net45" />
+    <file src="Savory.Web.Mvc\bin\Release\Savory.Web.Mvc.xml" target="lib\net45" />
+  </files>
+</package>
