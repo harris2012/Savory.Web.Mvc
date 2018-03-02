@@ -16,8 +16,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Provider\UserProviderFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Provider\UserRoleProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Provider\UserRoleProviderFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SavorySecurityOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\RedirectTo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\SavoryAuthorizeAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\SavorySecurityOptions.cs" />
   </ItemGroup>
 </Project>

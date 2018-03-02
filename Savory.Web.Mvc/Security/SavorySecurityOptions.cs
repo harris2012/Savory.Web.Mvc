@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Savory.Web.Mvc
+namespace Savory.Web.Mvc.Security
 {
     public static class SavorySecurityOptions
     {
