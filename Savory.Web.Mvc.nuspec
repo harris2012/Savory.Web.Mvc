@@ -19,11 +19,11 @@
     </frameworkAssemblies>
     <dependencies>
       <dependency id="Microsoft.AspNet.Mvc" version="[5.2.4,)" />
-      <dependency id="Savory.Logging" version="[2.0.1,)" />
+      <dependency id="Savory.Logging" version="[1.0.0,)" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Savory.Web.Mvc\bin\Release\Savory.Web.Mvc.dll" target="lib\net45" />
-    <file src="Savory.Web.Mvc\bin\Release\Savory.Web.Mvc.xml" target="lib\net45" />
+    <file src="Savory.Web.Mvc.Net45\bin\Release\Savory.Web.Mvc.dll" target="lib\net45" />
+    <file src="Savory.Web.Mvc.Net45\bin\Release\Savory.Web.Mvc.xml" target="lib\net45" />
   </files>
 </package>
