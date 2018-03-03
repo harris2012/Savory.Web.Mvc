@@ -9,13 +9,7 @@
     <Import_RootNamespace>Savory.Web.Mvc</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\UserProviderNotRegistException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\UserRoleProviderNotRegistException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HandleExceptionAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Provider\UserProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Provider\UserProviderFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Provider\UserRoleProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Provider\UserRoleProviderFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\RedirectTo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\SavoryAuthorizeAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\SavorySecurityOptions.cs" />

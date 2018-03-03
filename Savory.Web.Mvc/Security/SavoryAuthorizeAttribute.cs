@@ -1,7 +1,4 @@
-﻿using Savory.Web.Mvc.Exceptions;
-using Savory.Web.Mvc.Provider;
-using Savory.Web.Security;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
@@ -15,35 +12,10 @@ namespace Savory.Web.Mvc.Security
     public class SavoryAuthorizeAttribute: AuthorizeAttribute
     {
         /// <summary>
-        /// 获取或设置有权访问控制器或操作方法的用户角色。
-        /// </summary>
-        [Obsolete("Roles属性在代码中不被使用")]
-        public new string Roles
-        {
-            get { return base.Roles; }
-            set { base.Roles = value; }
-        }
-
-        /// <summary>
-        /// 获取或设置有权访问控制器或操作方法的用户。
-        /// </summary>
-        [Obsolete("Users属性在代码中不被使用")]
-        public new string Users
-        {
-            get { return base.Users; }
-            set { base.Users = value; }
-        }
-
-        /// <summary>
         /// 跳转方式
         /// <see cref="Canos.Web.Security.RedirectTo"/>
         /// </summary>
         public RedirectTo RedirectTo { get; set; }
-
-        /// <summary>
-        /// 有权访问控制器或操作方法的用户角色
-        /// </summary>
-        public string[] RoleList { get; set; }
 
         /// <summary>
         /// 构造函数
@@ -51,43 +23,6 @@ namespace Savory.Web.Mvc.Security
         public SavoryAuthorizeAttribute()
         {
             this.RedirectTo = RedirectTo.AbsoluteUri;
-        }
-
-        /// <summary>
-        /// <see cref="AuthorizeAttribute.AuthorizeCore(HttpContextBase)"/>
-        /// </summary>
-        /// <returns></returns>
-        protected override bool AuthorizeCore(HttpContextBase context)
-        {
-            if (context == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-
-            //验证主体
-            var principal = SavoryAuthentication.TryParsePrincipal(context);
-            if (principal == null)
-            {
-                return false;
-            }
-
-            //验证成员身份
-            if (this.RoleList != null && this.RoleList.Length > 0)
-            {
-                var provider = UserRoleProviderFactory.GetUserRoleProvider();
-                if (provider == null)
-                {
-                    throw new UserRoleProviderNotRegistException();
-                }
-                if (provider.IsInRole(this.RoleList))
-                {
-                    return true;
-                }
-            }
-
-            context.User = principal;
-
-            return true;
         }
 
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)

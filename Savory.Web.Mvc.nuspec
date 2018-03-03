@@ -20,7 +20,6 @@
     <dependencies>
       <dependency id="Microsoft.AspNet.Mvc" version="[5.2.4,)" />
       <dependency id="Savory.Logging" version="[1.0.0,)" />
-      <dependency id="Savory.Web" version="[1.0.0,)" />
     </dependencies>
   </metadata>
   <files>

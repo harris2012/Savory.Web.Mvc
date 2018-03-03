@@ -38,10 +38,6 @@
       <HintPath>..\packages\Savory.Logging.1.0.0\lib\net45\Savory.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Savory.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Savory.Web.1.0.0\lib\net45\Savory.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
