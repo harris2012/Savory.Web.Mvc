@@ -10,8 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)HandleExceptionAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\CanosPrincipal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\RedirectTo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\SavoryAuthorizeAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\SavorySecurityOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\SavoryAuthentication.cs" />
   </ItemGroup>
 </Project>

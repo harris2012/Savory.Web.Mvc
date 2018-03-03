@@ -25,6 +25,43 @@ namespace Savory.Web.Mvc.Security
             this.RedirectTo = RedirectTo.AbsoluteUri;
         }
 
+        /// <summary>
+        /// <see cref="AuthorizeAttribute.AuthorizeCore(HttpContextBase)"/>
+        /// </summary>
+        /// <returns></returns>
+        protected override bool AuthorizeCore(HttpContextBase context)
+        {
+            if (context == null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
+
+            //验证主体
+            var principal = SavoryAuthentication.TryParsePrincipal(context);
+            if (principal == null)
+            {
+                return false;
+            }
+
+            ////验证成员身份
+            //if (this.RoleList != null && this.RoleList.Length > 0)
+            //{
+            //    var provider = UserRoleProviderFactory.GetUserRoleProvider();
+            //    if (provider == null)
+            //    {
+            //        throw new UserRoleProviderNotRegistException();
+            //    }
+            //    if (provider.IsInRole(this.RoleList))
+            //    {
+            //        return true;
+            //    }
+            //}
+
+            context.User = principal;
+
+            return true;
+        }
+
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
             base.HandleUnauthorizedRequest(filterContext);
