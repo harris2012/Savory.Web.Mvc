@@ -12,20 +12,6 @@ namespace Savory.Web.Mvc.Security
     public class SavoryAuthorizeAttribute: AuthorizeAttribute
     {
         /// <summary>
-        /// 跳转方式
-        /// <see cref="Canos.Web.Security.RedirectTo"/>
-        /// </summary>
-        public RedirectTo RedirectTo { get; set; }
-
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        public SavoryAuthorizeAttribute()
-        {
-            this.RedirectTo = RedirectTo.AbsoluteUri;
-        }
-
-        /// <summary>
         /// <see cref="AuthorizeAttribute.AuthorizeCore(HttpContextBase)"/>
         /// </summary>
         /// <returns></returns>
@@ -67,7 +53,7 @@ namespace Savory.Web.Mvc.Security
             base.HandleUnauthorizedRequest(filterContext);
 
             string url = string.Empty;
-            switch (RedirectTo)
+            switch (SavorySecurityOptions.RedirectTo)
             {
                 case RedirectTo.AbsolutePath:
                     url = filterContext.HttpContext.Request.Url.AbsolutePath;
