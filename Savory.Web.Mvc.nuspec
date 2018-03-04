@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Savory.Web.Mvc</id>
-    <version>1.0.4</version>
+    <version>1.0.0</version>
     <title>Savory.Web.Mvc</title>
     <authors>Harris Zhang</authors>
     <owners>Harris Zhang</owners>
@@ -18,7 +18,7 @@
       <frameworkAssembly assemblyName="System.Web" targetFramework="net40" />
     </frameworkAssemblies>
     <dependencies>
-      <dependency id="Microsoft.AspNet.Mvc" version="[5.2.4,)" />
+      <dependency id="Microsoft.AspNet.Mvc" version="[5.2.3]" />
       <dependency id="Savory.Logging" version="[1.0.0,)" />
     </dependencies>
   </metadata>
